@@ -992,6 +992,7 @@ button:active{
 
 .footer-contact:hover{
     color: #fff;
+    text-decoration: underline!important;
 }
 
 .copyrightbottom{

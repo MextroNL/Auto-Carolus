@@ -67,15 +67,16 @@
                             <div class="col-6">
 <!--                                 Title-->
                                 <a href="<?php the_permalink(); ?>#content"> <h4 class="post-title"><?php the_title(); ?></h4></a>
-
-                                <p class="post-subtitle">
-                                    <?php echo $label_1; the_field('carrosserie'); ?><br>
-                                    <?php echo $label_2; the_field('transmissie'); ?><br>
-                                    <?php echo $label_3; the_field('kilometerstand'); ?>KM<br>
-                                    <?php echo $label_4; the_field('bouwjaar'); ?><br>
-                                    <?php echo $label_5; the_field('kenteken'); ?><br>
-                                    <?php echo $label_6; the_field('prijs'); ?>€<br>
-                                </p>
+                                <a href="<?php the_permalink(); ?>#content">
+                                    <p class="post-subtitle">
+                                        <?php echo $label_1; the_field('carrosserie'); ?><br>
+                                        <?php echo $label_2; the_field('transmissie'); ?><br>
+                                        <?php echo $label_3; the_field('kilometerstand'); ?>KM<br>
+                                        <?php echo $label_4; the_field('bouwjaar'); ?><br>
+                                        <?php echo $label_5; the_field('kenteken'); ?><br>
+                                        <?php echo $label_6; the_field('prijs'); ?>€<br>
+                                    </p>
+                                </a>
                                 <a href="<?php the_permalink(); ?>#content" class="single-button">Bekijk</a>
                             </div>
                             <div class="col-6">
@@ -95,14 +96,16 @@
                                 <div class="col-6">
 <!--                                     Title-->
                                     <a href="<?php the_permalink(); ?>#content"><h4 class="post-title"><?php the_title(); ?></h4></a>
-                                    <p class="post-subtitle">
-                                        <?php echo $label_1; the_field('carrosserie'); ?><br>
-                                        <?php echo $label_2; the_field('transmissie'); ?><br>
-                                        <?php echo $label_3; the_field('kilometerstand'); ?><br>
-                                        <?php echo $label_4; the_field('bouwjaar'); ?><br>
-                                        <?php echo $label_5; the_field('kenteken'); ?><br>
-                                        <?php echo $label_6; the_field('prijs'); ?>€<br>
-                                    </p>
+                                    <a href="<?php the_permalink(); ?>#content">
+                                        <p class="post-subtitle">
+                                            <?php echo $label_1; the_field('carrosserie'); ?><br>
+                                            <?php echo $label_2; the_field('transmissie'); ?><br>
+                                            <?php echo $label_3; the_field('kilometerstand'); ?><br>
+                                            <?php echo $label_4; the_field('bouwjaar'); ?><br>
+                                            <?php echo $label_5; the_field('kenteken'); ?><br>
+                                            <?php echo $label_6; the_field('prijs'); ?>€<br>
+                                        </p>
+                                    </a>
                                     <a href="<?php the_permalink(); ?>#content" class="single-button">Bekijk</a>
                                 </div>
                             </div>
