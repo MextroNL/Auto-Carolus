@@ -129,7 +129,7 @@
                             <?php echo $label_5; the_field('kenteken'); ?><br>
                             <?php echo $label_6; the_field('prijs'); ?>€<br>
                         </p>
-                        <p class="post-content"><?php echo wp_trim_words( get_the_content(), 40, '...' );?></p>
+                        <p class="post-content" id="post-list-content"><?php echo wp_trim_words( get_the_content(), 40, '...' );?></p>
 
                         <a href="<?php the_permalink(); ?>#content" class="single-button"><?php echo $view_post_list; ?></a>
                     </div>

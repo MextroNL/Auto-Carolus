@@ -879,9 +879,12 @@ button:active{
             }
 
             .post-content {
-                display: block !important;
+                display: block;
                 font-size: 1.5vmax;
+            }
 
+            #post-list-content{
+                display: none;
             }
 
             .perma-button {
