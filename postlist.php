@@ -113,16 +113,19 @@
                         <a href="<?php the_permalink(); ?>#content"><h3 class="post-title"><?php the_title(); ?></h3></a>
                         <!-- Subtitle -->
                         <!-- Content -->
-                        <p class="post-subtitle">
-                            <?php echo $label_1; the_field('carrosserie'); ?><br>
-                            <?php echo $label_2; the_field('transmissie'); ?><br>
-                            <?php echo $label_3; the_field('kilometerstand'); ?>KM<br>
-                            <?php echo $label_4; the_field('bouwjaar'); ?><br>
-                            <?php echo $label_5; the_field('kenteken'); ?><br>
-                            <?php echo $label_6; the_field('prijs'); ?>€<br>
-                        </p>
-                        <p class="post-content" id="post-list-content"><?php echo wp_trim_words( get_the_content(), 40, '...' );?></p>
-
+                        <a href="<?php the_permalink(); ?>#content">
+                            <p class="post-subtitle">
+                                <?php echo $label_1; the_field('carrosserie'); ?><br>
+                                <?php echo $label_2; the_field('transmissie'); ?><br>
+                                <?php echo $label_3; the_field('kilometerstand'); ?>KM<br>
+                                <?php echo $label_4; the_field('bouwjaar'); ?><br>
+                                <?php echo $label_5; the_field('kenteken'); ?><br>
+                                <?php echo $label_6; the_field('prijs'); ?>€<br>
+                            </p>
+                        </a>
+                        <a href="<?php the_permalink(); ?>#content">
+                            <p class="post-content" id="post-list-content"><?php echo wp_trim_words( get_the_content(), 40, '...' );?></p>
+                        </a>
                         <a href="<?php the_permalink(); ?>#content" class="single-button"><?php echo $view_post_list; ?></a>
                     </div>
 
