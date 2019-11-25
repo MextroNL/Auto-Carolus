@@ -11,7 +11,7 @@
             <!-- Posts loop -->
             <!-- Terug Knop -->
             <div class="single-title">
-                <div class="go-back"><a href="<?php echo home_url() . $collection;?>"><i class="fas fa-chevron-circle-left"></i><span class="terug"><?php echo $back; ?></span></a></div>
+                <a href="<?php echo home_url() . $collection;?>"><div class="go-back"><i class="fas fa-chevron-circle-left"></i><span class="terug"><?php echo $back; ?></span></div></a>
             </div>
 
             <!-- Title -->
@@ -20,9 +20,14 @@
     <div class="row post-block" id="post-<?php the_ID(); ?>">
         <div class="col-6">
             <!-- Thumbnail -->
-           <div class="single-post-thumbnail"><?php the_post_thumbnail('small'); ?></div>
+            <a href="<?php echo get_the_post_thumbnail_url() ?>"
+               class="swipebox " rel="post-gallery-<?php the_ID(); ?>">
+                <div class="single-post-thumbnail">
+            <?php echo the_post_thumbnail('small'); ?>
+                </div>
+            </a>
+            <?php echo do_shortcode( '[post_gallery]' ); ?>
             <!-- Thumbnail End -->
-            <?php echo do_shortcode('[post_gallery]'); ?>
         </div>
         <div class="col-6">
 
@@ -47,16 +52,6 @@
 
 
 
-
-
-
-            <!-- Image -->
-<!--            <div class="blog-thumbnail" id="img_click">-->
-<!--                <a href="--><?php //echo get_the_post_thumbnail_url(); ?><!--">-->
-<!--                    --><?php //the_post_thumbnail('large'); ?>
-<!--                </a>-->
-<!--            </div>-->
-
         </div>
 
 
@@ -70,6 +65,9 @@ if (strlen($content) < 240) {
     echo "<style>.page-content{padding-bottom:20vmax}</style>";
 }
 ?>
+
+
+
 
 
 <?php get_footer(); ?>

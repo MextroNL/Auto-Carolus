@@ -1297,7 +1297,30 @@ select:focus{
     padding-left: 4vmax!important;
 }
 
+.post-gallery{
+    width: 32vmax;
+}
+
+.post-gallery img{
+    width: 6.2vmax;
+    height: auto;
+}
+
+.post-block img{
+    transition: .1s ease;
+}
+
+.post-block img:hover{
+    transition: .1s ease;
+    -webkit-transform: scale(1.04);
+    -moz-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    -o-transform: scale(1.04);
+}
 @media screen and (max-width: 575px) {
+    .post-gallery{
+        width: 22vmax;
+    }
     .post-gallery img{
         width: 5vmax!important;
         height: 5vmax!important;
@@ -2156,9 +2179,6 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 .extended-content{
     display: none!important;
 }
-
-
-
 
 /*CSS END*/
 
