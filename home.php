@@ -113,7 +113,7 @@
                             endif;?>
                 <?php
                 endwhile;?>
-                <a href="<?php the_permalink(); ?>/blog/#content" class="more-posts">Meer Auto's</a>
+                <a href="<?php the_permalink(); echo $collection?>" class="more-posts">Meer Auto's</a>
             <?php
             else:
                 echo '<h4 id="results">Er zijn op dit moment geen beschikbare posts.</h4>';

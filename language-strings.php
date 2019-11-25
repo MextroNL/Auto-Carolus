@@ -27,6 +27,8 @@ global $results_2;
 global $result_1;
 global $result_2;
 global $back;
+global $collection;
+
 
 if (strpos($url,'/en/') !== false) {
     //English Strings
@@ -51,6 +53,7 @@ if (strpos($url,'/en/') !== false) {
     $results_1 = "There are "; $results_2 = ' results for: "';
     $result_1 = "There is "; $result_2 = ' result for: "';
     $back = "Go Back";
+    $collection = "collection/#content";
 
 } else {
     //Dutch Strings
@@ -76,4 +79,5 @@ if (strpos($url,'/en/') !== false) {
     $results_1 = "Er zijn "; $results_2 = ' resultaten gevonden voor: "';
     $result_1 = "Er is "; $result_2 = ' resultaat gevonden voor: "';
     $back = "Ga Terug";
+    $collection = "collectie/#content";
 }
