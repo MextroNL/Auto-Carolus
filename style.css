@@ -359,7 +359,7 @@ button:active{
 }
 
 .header-widget-icon{
-    font-size: 3vmax;
+    font-size: 2vmax;
     text-align: center;
     color: #FFFFFF;
 
@@ -378,7 +378,7 @@ button:active{
 
 @media screen and (max-width: 575px) {
     .header-widget-icon{
-        font-size: 5vmax!important;
+        font-size: 3vmax!important;
     }
 }
 
@@ -857,7 +857,7 @@ button:active{
 
             .post-subtitle {
                 display: block !important;
-                font-size: 2vmax;
+                font-size: 1.4vmax;
             }
 
             .post-content {
@@ -1039,6 +1039,7 @@ button:active{
     padding: 0.5vmax 1vmax 0.5vmax 1.5vmax;
     border: 3px solid #af976d;
     border-radius: 20vmax;
+    margin-bottom: 5vmax;
 }
 
 #search_posts{/*Input*/
@@ -1243,12 +1244,24 @@ select:focus{
 
 /*-------------------------------------------------------------------------------------------*/
 
-/*Post Page (Recipe)*/
-.recipe-thumbnail img{
+/*Post Page*/
+.single-post-thumbnail img{
     display: block;
     width: 32vmax;
     height: auto;
     padding-bottom: 10px;
+}
+
+.postlist-thumbnail img{
+    display: block;
+    width: 22vmax;
+    height: auto;
+    padding-bottom: 10px;
+    margin: auto;
+}
+
+.post-description{
+    padding-left: 4vmax!important;
 }
 
 @media screen and (max-width: 575px) {
@@ -1256,8 +1269,11 @@ select:focus{
         width: 5vmax!important;
         height: auto!important;
     }
-    .recipe-thumbnail img {
+    .postlist-thumbnail img {
         width: 21vmax!important;
+    }
+    .single-post-thumbnail img{
+
     }
 }
 

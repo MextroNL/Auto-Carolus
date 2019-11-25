@@ -17,7 +17,7 @@
     <div class="row post-block" id="post-<?php the_ID(); ?>">
         <div class="col-6">
             <!-- Thumbnail -->
-           <div class="recipe-thumbnail"><?php the_post_thumbnail('small'); ?></div>
+           <div class="single-post-thumbnail"><?php the_post_thumbnail('small'); ?></div>
             <!-- Thumbnail End -->
             <?php echo do_shortcode('[post_gallery]'); ?>
         </div>
