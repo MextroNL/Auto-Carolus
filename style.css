@@ -745,9 +745,7 @@ button:active{
             width: fit-content;
             text-align: left;
         }
-        .post-title:hover{
-            text-decoration: underline;
-        }
+
         .post-subtitle{
             color: #af976d;
             font-family: 'Abel', sans-serif;;
@@ -1587,17 +1585,24 @@ select:focus{
     width: 100%;
     display: inline-block;
     padding-top: 2vmax;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#slogan{
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 2vmax;
 }
 
 @media screen and (max-width: 575px) {
     #slogan{
-        width: 90%;
-        margin: auto;
+
+
     }
     .single-content{
         font-size: 2vmax;
-        width: 90%;
-        margin: auto;
+
     }
 
 }
