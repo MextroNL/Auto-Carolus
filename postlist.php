@@ -112,14 +112,6 @@
                         <!-- Title -->
                         <a href="<?php the_permalink(); ?>#content"><h3 class="post-title"><?php the_title(); ?></h3></a>
                         <!-- Subtitle -->
-                        <h3 class="post-subtitle"><?php
-                            $posttags = get_the_tags();
-                            if ($posttags) {
-                                foreach($posttags as $tag) {
-                                    echo $tag->name . ' ';
-                                }
-                            }
-                            ?></h3>
                         <!-- Content -->
                         <p class="post-subtitle">
                             <?php echo $label_1; the_field('carrosserie'); ?><br>

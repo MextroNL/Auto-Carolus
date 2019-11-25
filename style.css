@@ -1279,6 +1279,17 @@ select:focus{
     height: auto;
     padding-bottom: 10px;
     margin: auto;
+    cursor: pointer;
+    transition: .1s ease;
+
+}
+
+.postlist-thumbnail img:hover{
+    transition: .1s ease;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
 }
 
 .post-description{
