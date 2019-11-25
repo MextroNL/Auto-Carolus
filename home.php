@@ -38,10 +38,8 @@
                 ?>
             </div>
         </div>
-        <br>
-<br><br>
 
-<!--        --><?php //echo do_shortcode('[Best_Wordpress_Gallery id="2"]'); ?>
+
 
 
 
