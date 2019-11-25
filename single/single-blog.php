@@ -28,7 +28,7 @@
             <p class="post-title">
                 <?php the_field('prijs'); ?>€<br>
             </p>
-            <p class="post-subtitle">
+            <p class="single-post-subtitle">
                 <?php echo $label_1; the_field('carrosserie'); ?><br>
                 <?php echo $label_2; the_field('transmissie'); ?><br>
                 <?php echo $label_3; the_field('kilometerstand'); ?>KM<br>

@@ -747,6 +747,14 @@ button:active{
             text-align: left;
         }
 
+        .single-post-subtitle{
+            color: #af976d;
+            font-family: 'Abel', sans-serif;;
+            font-weight: 300;
+            font-size: 1.3vmax;
+            text-align: left;
+        }
+
         .post-thumbnail{
             margin: auto;
             display: block;
@@ -853,7 +861,9 @@ button:active{
 
             .post-title {
                 display: block !important;
+                font-size: 2vmax;
             }
+
 
             .post-subtitle {
                 display: block !important;
@@ -892,6 +902,9 @@ button:active{
 
             .post-thumbnail img {
                 width: 22vmax!important;
+            }
+            .single-post-subtitle{
+                font-size: 1.8vmax;
             }
         }
 
@@ -1273,7 +1286,7 @@ select:focus{
         width: 21vmax!important;
     }
     .single-post-thumbnail img{
-
+        width: 25vmax;
     }
 }
 
@@ -1386,7 +1399,7 @@ select:focus{
     text-align: left!important;
     text-decoration: none;
     color: #af976d;
-    font-size: 2.5vmax;
+    font-size: 2.3vmax!important;
     font-weight: 700;
     font-family: 'Abel', sans-serif;
     /*padding-right: 10vmax;*/
@@ -2134,9 +2147,7 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 
 /*Phone*/
 @media screen and (max-width: 480px) {
-    .post-title{
 
-    }
 }
 
 
