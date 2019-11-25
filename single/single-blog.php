@@ -11,7 +11,7 @@
             <!-- Posts loop -->
             <!-- Terug Knop -->
             <div class="single-title">
-                <div class="go-back"><a href="<?php echo home_url() . '/linkkkk/';?>"><i class="fas fa-chevron-circle-left"></i><span class="terug"><?php echo $back; ?></span></a></div>
+                <div class="go-back"><a href="<?php echo home_url() . $collection;?>"><i class="fas fa-chevron-circle-left"></i><span class="terug"><?php echo $back; ?></span></a></div>
             </div>
 
             <!-- Title -->
