@@ -1300,7 +1300,7 @@ select:focus{
 @media screen and (max-width: 575px) {
     .post-gallery img{
         width: 5vmax!important;
-        height: auto!important;
+        height: 5vmax!important;
     }
     .postlist-thumbnail img {
         width: 21vmax!important;
