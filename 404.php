@@ -71,7 +71,7 @@ if ( is_admin_bar_showing() ) echo '<div style="min-height: 32px;"></div>';
 
         <div class="container">
             <h1 class="pagetitle"><b>404</b><br><?php echo $error_message; ?></h1>
-            <a href="<?php echo home_url()?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/images/404_binoculars.png" class="error-icon" width="200" height="200" alt="user holding binoculars"></a>
+            <a href="<?php echo home_url()?>"><span class="error-icon"><i class="fas fa-exclamation-triangle"></i></span></a>
             <a href="<?php echo home_url()?>"><h2 class="subheading"><?php echo $return_home; ?></h2></a>
 
         </div>

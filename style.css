@@ -253,6 +253,15 @@ button:active{
     top: 0!important;
 }
 
+@media screen and (max-width: 575px){
+    #footer-lang img {
+        height: 2vmax;
+        position: absolute;
+        top: -10px;
+        right: -36px;
+    }
+}
+
 .language_menu .dropdown-item:active{
     background-color: unset!important;
     color: unset!important;
@@ -2065,18 +2074,18 @@ textarea[aria-invalid="true"]::placeholder{
 /*404*/
 .errorblock{
     padding: 5vmax;
-    padding-bottom: 20vmax
+    padding-bottom: 20vmax;
+    text-align: center;
     }
 
-.error-icon{
-    display: block;
-    margin: auto;
-    width: 15vmax;
-    height: auto;
+.error-icon i{
     transition: .1s ease;
+    font-size: 10vmax;
+    color: #af976d;
+    margin: 2vmax;
 }
 
-.error-icon:hover{
+.error-icon i:hover{
     cursor: pointer;
     transition: .1s ease;
     -webkit-transform: scale(1.1);
@@ -2131,6 +2140,10 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 }
 
 .bwg-topbar-container{
+    display: none!important;
+}
+
+.extended-content{
     display: none!important;
 }
 
