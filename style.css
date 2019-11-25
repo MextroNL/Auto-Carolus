@@ -258,7 +258,7 @@ button:active{
         height: 2vmax;
         position: absolute;
         top: -10px;
-        right: -36px;
+        right: -13px;
     }
 }
 
@@ -777,8 +777,6 @@ button:active{
             margin: auto;
             transition: .1s ease;
             cursor: pointer;
-            /*border: 5px solid #424041;*/
-            border-radius: 13px;
         }
 
         .post-thumbnail img:hover{
@@ -910,9 +908,6 @@ button:active{
                 line-height: 3vmax;
             }
 
-            .post-thumbnail img {
-                width: 22vmax!important;
-            }
             .single-post-subtitle{
                 font-size: 1.8vmax;
             }
