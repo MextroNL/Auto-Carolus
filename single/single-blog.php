@@ -14,6 +14,9 @@
                 <div class="go-back"><a href="<?php echo home_url() . '/linkkkk/';?>"><i class="fas fa-chevron-circle-left"></i><span class="terug"><?php echo $back; ?></span></a></div>
             </div>
 
+            <!-- Title -->
+            <h2 class="blogtitle"><?php the_title(); ?></h2>
+
     <div class="row post-block" id="post-<?php the_ID(); ?>">
         <div class="col-6">
             <!-- Thumbnail -->
@@ -22,8 +25,7 @@
             <?php echo do_shortcode('[post_gallery]'); ?>
         </div>
         <div class="col-6">
-            <!-- Title -->
-            <h2 class="blogtitle"><?php the_title(); ?></h2>
+
             <!-- Subtitle -->
             <p class="post-title">
                 <?php the_field('prijs'); ?>€<br>
@@ -37,8 +39,10 @@
 
             </p>
             <!-- Content -->
-            <div class="single-content"><?php the_content(); ?></div>
+
         </div>
+        <h2 class="blogtitle" id="slogan"><?php the_field('slogan'); ?><br></h2>
+        <div class="single-content"><?php the_content(); ?></div>
     </div>
 
 
