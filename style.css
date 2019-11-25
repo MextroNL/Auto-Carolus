@@ -186,8 +186,8 @@ button:active{
 .hamburger-icon{
     color: #af976d;
 }
-.hamburger-icon:hover{
-    color: #ff740a;
+.hamburger-icon:active{
+    color: #af976d;
 }
 
 /*Navigation Items*/
