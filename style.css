@@ -1133,6 +1133,12 @@ button:active{
     -o-transform: scale(1.1);
 }
 
+@media screen and (max-width: 800px){
+    #retry_search{
+        padding-bottom:6vmax
+    }
+}
+
 
 #results{
     text-decoration: none;
