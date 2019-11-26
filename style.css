@@ -542,6 +542,13 @@ button:active{
             -ms-transform: scale(1.1);
             -o-transform: scale(1.1);
         }
+        .index-widget-title a{
+            color: #fff;
+        }
+        .index-widget-title a:hover{
+            color: #fff;
+            text-decoration: underline;
+        }
 
 /*SHOP CSS*/
         .cart-icon{
