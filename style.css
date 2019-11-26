@@ -495,16 +495,16 @@ button:active{
         }
 
         .index-widget{
-            background-color: #af976d;
+            /*background-color: #af976d;*/
             color: #fff;
             font-family: 'Abel', sans-serif;
             border-radius: 5vmax;
             text-align: center;
-            padding: 10px;
+            /*padding: 10px;*/
             max-width: 18vmax;
-            min-width: 15vmax;
+            /*min-width: 15vmax;*/
             margin: 2% auto 2% auto;
-            height: 30vmax;
+            height: 18vmax;
         }
 
         .index-widget h3{
@@ -515,13 +515,14 @@ button:active{
         }
 
         .index-widget p{
-            font-family: 'Abel', sans-serif;
-            font-weight: 300;
-            text-align: left;
-            font-size: 1.1vmax;
-            margin-bottom: 0;
-            padding-bottom: 1vmax;
-            color: #fff;
+            /*font-family: 'Abel', sans-serif;*/
+            /*font-weight: 300;*/
+            /*text-align: left;*/
+            /*font-size: 1.1vmax;*/
+            /*margin-bottom: 0;*/
+            /*padding-bottom: 1vmax;*/
+            /*color: #fff;*/
+            display: none;
         }
 
         .index-widget-icon{
@@ -677,7 +678,7 @@ button:active{
             .index-widget{
                 max-width: 30vmax!important;
                 max-height: 45vmax!important;
-                height: 43vmax;
+                height: 21vmax;
             }
             .index-widget h3{
                 font-size: 3vmax!important;
@@ -694,6 +695,9 @@ button:active{
 
             .read-more{
                 font-size: 1.5vmax!important;
+            }
+            .index-widget .read-more{
+                width: 12vmax!important;
             }
         }
 

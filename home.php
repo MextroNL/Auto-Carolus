@@ -24,15 +24,15 @@
             <div class="row footer-widget-wrapper">
                 <?php
                 if(is_active_sidebar('index-widget-1')){?>
-                    <div class="col-sm-4"><?php dynamic_sidebar('index-widget-1');?></div><?php
+                    <div class="col-4"><?php dynamic_sidebar('index-widget-1');?></div><?php
                 }
 
                 if(is_active_sidebar('index-widget-2')){?>
-                    <div class="col-sm-4"><?php dynamic_sidebar('index-widget-2');?></div><?php
+                    <div class="col-4"><?php dynamic_sidebar('index-widget-2');?></div><?php
                 }
 
                 if(is_active_sidebar('index-widget-3')){?>
-                    <div class="col-sm-4"><?php dynamic_sidebar('index-widget-3');?></div><?php
+                    <div class="col-4"><?php dynamic_sidebar('index-widget-3');?></div><?php
                 }
 
                 ?>
