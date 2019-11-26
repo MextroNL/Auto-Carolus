@@ -1103,6 +1103,25 @@ button:active{
     color: #fff;
 }
 
+#retry_search{
+    font-size: 5vmax;
+    color: #af976d;
+    cursor: pointer;
+    text-align: center;
+}
+
+#retry_search i{
+    transition: .1s ease;
+}
+
+#retry_search i:hover {
+    transition: .1s ease;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
 
 #results{
     text-decoration: none;

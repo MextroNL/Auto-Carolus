@@ -10,7 +10,7 @@
     <div class="container" id="content">
         <h3 class="cat-description">Ons aanbod aan Auto's</h3>
 
-        <form name="search" class="search_input" method="post" action="<?php the_permalink();?>#content">
+        <form name="search" class="search_input" id="search-submit" method="post" action="<?php the_permalink();?>#content">
             <!--Searchbar-->
             <input type="search" onchange="document.filters.submit()" name="search" placeholder="<?php echo $searchbar ?>" <?php if(isset($_REQUEST['search'])){echo 'value="' . $_REQUEST['search'] . '"';}?> id="search_posts">
             <button type="submit" name="submit" id="searchicon">
@@ -134,7 +134,8 @@
             endwhile;
             $totalPosts = $custom_query->found_posts; //Shows Total Posts
         elseif (!empty($_REQUEST['search']) && $totalPosts == 0):
-            echo '<h2 id="results">' . $noresultsfor . ' "' . $nospace . '"</h2>';
+            echo '<h2 id="results">' . $noresultsfor . ' "' . $nospace . '"</h2>
+                <a onclick="document.getElementById(\'search_posts\').value = \'\'"><div id="retry_search"><i class="fas fa-undo-alt"></i></div></a>';
         else:
             echo '<h2 id="results">' . $noresults . '</h2><style>@media screen and (max-width: 800px){.container{padding-bottom:20vmax}}</style>';
 
