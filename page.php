@@ -25,7 +25,7 @@
 
 <?php
 $content = get_the_content();
-if (strlen($content) < 240) {
+if (strlen($content) < 500) {
     echo "<style>@media screen and (max-width: 800px){.block1content{padding-bottom:20vmax}}</style>";
 }
 ?>
