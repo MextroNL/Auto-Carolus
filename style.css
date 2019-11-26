@@ -2204,6 +2204,29 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
     display: none!important;
 }
 
+.post-gallery .is-video:before {
+    font-family: Font Awesome\ 5 Free!important;
+    content: "\f04b"!important;
+    font-weight: 900!important;
+    color: #fff!important;
+    right: 3px!important;
+    left: 5px!important;
+    font-size: 2vmax!important;
+    text-align: center!important;
+
+}
+
+.post-gallery .is-video img:hover:before {
+    font-family: Font Awesome\ 5 Free!important;
+    content: "\f04b"!important;
+    font-weight: 900!important;
+    color: #12fe!important;
+    right: 3px!important;
+    left: 5px!important;
+    font-size: 2vmax!important;
+    text-align: center!important;
+}
+
 /*CSS END*/
 
 
