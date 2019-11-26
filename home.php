@@ -48,10 +48,14 @@
         <!--Index Post Block-->
         <div class="block3">
             <?php
+            if (strpos($url,'/en/') !== false) {
+                $category_id = 46;
+            }else{
                 $category_id = 3;
-                ?>
+            }
+            ?>
             <a href="<?php the_permalink(); ?>/blog/#content"><h2 class="cat-name"><?php echo get_cat_name( $category_id );?> </h2></a>
-            <h3 class="cat-description">Recent toegevoegde Auto's</h3>
+            <h3 class="cat-description"><?php echo $recent_cars;?></h3>
             <?php
 
 
@@ -116,10 +120,10 @@
                             endif;?>
                 <?php
                 endwhile;?>
-                <a href="<?php the_permalink(); echo $collection?>" class="more-posts">Meer Auto's</a>
+                <a href="<?php the_permalink(); echo $collection?>" class="more-posts"><?php echo $morecars; ?></a>
             <?php
             else:
-                echo '<h4 id="results">Er zijn op dit moment geen beschikbare posts.</h4>';
+                echo '<h4 id="results">' . $nocurrentresults . '</h4>';
             endif; ?>
             <?php wp_reset_query(); // reset the query ?>
         </div>
