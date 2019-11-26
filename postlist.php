@@ -49,7 +49,7 @@
             $posts_per_page = -1; // Search Results
         }
         else {
-            $posts_per_page = 4; // default value
+            $posts_per_page = 8; // default value
         }
 
         //Beroep Filter Loop
