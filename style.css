@@ -464,7 +464,7 @@ button:active{
 
         .block1content p{
             text-decoration: none;
-            color: #af976d;
+            color: #af976d!important;
             font-size: 1.3vmax;
             font-family: 'Abel', sans-serif;
 
@@ -953,6 +953,13 @@ button:active{
     color: #fff;
     text-align: center;
     padding: 2vmax 0 2vmax 0;
+}
+.footer-title a{
+    color: #fff;
+}
+.footer-title a:hover{
+    color: #fff;
+    text-decoration: underline;
 }
 .footer-widget{
     text-align: center;
