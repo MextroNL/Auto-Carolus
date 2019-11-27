@@ -45,7 +45,7 @@
         <?php the_custom_logo(); ?>
 
     </div>
-    <div class="navbar language_menu">
+    <div class="navbar language_menu" id="header-lang">
 
         <?php
         wp_nav_menu( array(

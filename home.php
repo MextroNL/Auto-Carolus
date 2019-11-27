@@ -48,7 +48,7 @@
         <!--Index Post Block-->
         <div class="block3">
 
-            <a href="<?php the_permalink(); ?>/blog/#content"><h2 class="cat-name"><?php echo $category_name;?> </h2></a>
+            <a href="<?php the_permalink(); echo $collection; ?>"><h2 class="cat-name"><?php echo $category_name;?> </h2></a>
             <h3 class="cat-description"><?php echo $recent_cars;?></h3>
             <?php
 
