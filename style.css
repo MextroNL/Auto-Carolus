@@ -715,6 +715,7 @@ button:active{
 
             .read-more{
                 font-size: 1.5vmax!important;
+                width: 13vmax!important;
             }
         }
 
