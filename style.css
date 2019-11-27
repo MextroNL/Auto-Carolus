@@ -2072,7 +2072,7 @@ select:focus{
 }
 
 .wpcf7-mail-sent-ok{
-    color: #af976d;
+    color: #fff;
     background-color: #71a26e;
     border: 3px solid #aae4a8!important;
     border-radius: 2vmax;
