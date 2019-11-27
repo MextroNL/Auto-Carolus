@@ -368,7 +368,7 @@ button:active{
 }
 
 .header-widget-icon{
-    font-size: 2vmax;
+    font-size: 3vmax;
     text-align: center;
     color: #FFFFFF;
 
@@ -387,7 +387,7 @@ button:active{
 
 @media screen and (max-width: 575px) {
     .header-widget-icon{
-        font-size: 3vmax!important;
+        font-size: 4vmax!important;
     }
 }
 
@@ -1972,8 +1972,8 @@ select:focus{
 }
 
 .verzend-knop:hover{
-    background-color: #af976d;
-    border: 3px solid #af976d;
+    background-color: #424041;
+    border: 3px solid #fff;
 
 }
 
