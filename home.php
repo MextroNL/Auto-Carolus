@@ -47,14 +47,8 @@
 
         <!--Index Post Block-->
         <div class="block3">
-            <?php
-            if (strpos($url,'/en/') !== false) {
-                $category_id = 46;
-            }else{
-                $category_id = 3;
-            }
-            ?>
-            <a href="<?php the_permalink(); ?>/blog/#content"><h2 class="cat-name"><?php echo get_cat_name( $category_id );?> </h2></a>
+
+            <a href="<?php the_permalink(); ?>/blog/#content"><h2 class="cat-name"><?php echo $category_name;?> </h2></a>
             <h3 class="cat-description"><?php echo $recent_cars;?></h3>
             <?php
 
@@ -81,7 +75,7 @@
                                         <?php echo $label_6; the_field('prijs'); ?>€<br>
                                     </p>
                                 </a>
-                                <a href="<?php the_permalink(); ?>#content" class="single-button">Bekijk</a>
+                                <a href="<?php the_permalink(); ?>#content" class="single-button"><?php echo $view_post_list; ?></a>
                             </div>
                             <div class="col-6">
 <!--                                 Thumbnail-->
@@ -110,7 +104,7 @@
                                             <?php echo $label_6; the_field('prijs'); ?>€<br>
                                         </p>
                                     </a>
-                                    <a href="<?php the_permalink(); ?>#content" class="single-button">Bekijk</a>
+                                    <a href="<?php the_permalink(); ?>#content" class="single-button"><?php echo $view_post_list; ?></a>
                                 </div>
                             </div>
 <!--                            Post Content End-->

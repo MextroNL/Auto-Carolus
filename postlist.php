@@ -8,7 +8,7 @@
 
 <?php get_header(); ?>
     <div class="container" id="content">
-        <h3 class="cat-description">Ons aanbod aan Auto's</h3>
+        <h3 class="cat-description"><?php echo $postlist_subtitle ?></h3>
 
         <form name="search" class="search_input" id="search-submit" method="post" action="<?php the_permalink();?>#content">
             <!--Searchbar-->

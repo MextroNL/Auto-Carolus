@@ -30,8 +30,9 @@ global $back;
 global $collection;
 global $nocurrentresults;
 global $morecars;
-global $category_id;
+global $category_name;
 global $recent_cars;
+global $postlist_subtitle;
 
 
 if (strpos($url,'/en/') !== false) {
@@ -60,8 +61,9 @@ if (strpos($url,'/en/') !== false) {
     $collection = "/collection/#content";
     $nocurrentresults = "There aren't any available cars at this time.";
     $morecars = "More Cars";
-    $category_id = 46;
+    $category_name = "Collection";
     $recent_cars = "Recently added Cars";
+    $postlist_subtitle = "Our range of Cars";
 
 } else {
     //Dutch Strings
@@ -90,6 +92,7 @@ if (strpos($url,'/en/') !== false) {
     $collection = "/collectie/#content";
     $nocurrentresults = "Er zijn op dit moment geen beschikbare auto's.";
     $morecars = "Meer Auto's";
-    $category_id = 3;
+    $category_name = "Collectie";
     $recent_cars = "Recent toegevoegde Auto's";
+    $postlist_subtitle = "Ons aanbod aan Auto's";
 }
