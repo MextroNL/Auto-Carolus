@@ -1488,6 +1488,8 @@ select:focus{
 
 .single-title{
     text-align: center;
+    width: fit-content;
+    margin: auto;
 }
 
 .singletitle{
@@ -1523,9 +1525,7 @@ select:focus{
 .go-back{
     float: none;
     margin: 1vmax auto 3vmax auto;
-    width: fit-content;
     display: block;
-    width: fit-content;
     background-color: #af976d;
     padding: 0.5vmax;
     font-family: 'Abel', sans-serif;
@@ -1534,7 +1534,6 @@ select:focus{
     line-height: 2vmax;
     border-radius: 1vmax;
     cursor: pointer;
-    margin-bottom: 3vmax;
 }
 
 
