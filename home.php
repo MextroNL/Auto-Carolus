@@ -38,10 +38,8 @@
                 ?>
             </div>
         </div>
-        <br>
-<br><br>
 
-<!--        --><?php //echo do_shortcode('[Best_Wordpress_Gallery id="2"]'); ?>
+
 
 
 
@@ -49,11 +47,9 @@
 
         <!--Index Post Block-->
         <div class="block3">
-            <?php
-                $category_id = 3;
-                ?>
-            <a href="<?php the_permalink(); ?>/blog/#content"><h2 class="cat-name"><?php echo get_cat_name( $category_id );?> </h2></a>
-            <h3 class="cat-description">Recent toegevoegde Auto's</h3>
+
+            <a href="<?php the_permalink(); echo $collection; ?>"><h2 class="cat-name"><?php echo $category_name;?> </h2></a>
+            <h3 class="cat-description"><?php echo $recent_cars;?></h3>
             <?php
 
 
@@ -69,16 +65,17 @@
                             <div class="col-6">
 <!--                                 Title-->
                                 <a href="<?php the_permalink(); ?>#content"> <h4 class="post-title"><?php the_title(); ?></h4></a>
-
-                                <p class="post-subtitle">
-                                    <?php echo $label_1; the_field('carrosserie'); ?><br>
-                                    <?php echo $label_2; the_field('transmissie'); ?><br>
-                                    <?php echo $label_3; the_field('kilometerstand'); ?>KM<br>
-                                    <?php echo $label_4; the_field('bouwjaar'); ?><br>
-                                    <?php echo $label_5; the_field('kenteken'); ?><br>
-                                    <?php echo $label_6; the_field('prijs'); ?>€<br>
-                                </p>
-                                <a href="<?php the_permalink(); ?>#content" class="single-button">Bekijk</a>
+                                <a href="<?php the_permalink(); ?>#content">
+                                    <p class="post-subtitle">
+                                        <?php echo $label_1; the_field('carrosserie'); ?><br>
+                                        <?php echo $label_2; the_field('transmissie'); ?><br>
+                                        <?php echo $label_3; the_field('kilometerstand'); ?>KM<br>
+                                        <?php echo $label_4; the_field('bouwjaar'); ?><br>
+                                        <?php echo $label_5; the_field('kenteken'); ?><br>
+                                        <?php echo $label_6; the_field('prijs'); ?>€<br>
+                                    </p>
+                                </a>
+                                <a href="<?php the_permalink(); ?>#content" class="single-button"><?php echo $view_post_list; ?></a>
                             </div>
                             <div class="col-6">
 <!--                                 Thumbnail-->
@@ -97,15 +94,17 @@
                                 <div class="col-6">
 <!--                                     Title-->
                                     <a href="<?php the_permalink(); ?>#content"><h4 class="post-title"><?php the_title(); ?></h4></a>
-                                    <p class="post-subtitle">
-                                        <?php echo $label_1; the_field('carrosserie'); ?><br>
-                                        <?php echo $label_2; the_field('transmissie'); ?><br>
-                                        <?php echo $label_3; the_field('kilometerstand'); ?><br>
-                                        <?php echo $label_4; the_field('bouwjaar'); ?><br>
-                                        <?php echo $label_5; the_field('kenteken'); ?><br>
-                                        <?php echo $label_6; the_field('prijs'); ?>€<br>
-                                    </p>
-                                    <a href="<?php the_permalink(); ?>#content" class="single-button">Bekijk</a>
+                                    <a href="<?php the_permalink(); ?>#content">
+                                        <p class="post-subtitle">
+                                            <?php echo $label_1; the_field('carrosserie'); ?><br>
+                                            <?php echo $label_2; the_field('transmissie'); ?><br>
+                                            <?php echo $label_3; the_field('kilometerstand'); ?><br>
+                                            <?php echo $label_4; the_field('bouwjaar'); ?><br>
+                                            <?php echo $label_5; the_field('kenteken'); ?><br>
+                                            <?php echo $label_6; the_field('prijs'); ?>€<br>
+                                        </p>
+                                    </a>
+                                    <a href="<?php the_permalink(); ?>#content" class="single-button"><?php echo $view_post_list; ?></a>
                                 </div>
                             </div>
 <!--                            Post Content End-->
@@ -115,10 +114,10 @@
                             endif;?>
                 <?php
                 endwhile;?>
-                <a href="<?php the_permalink(); ?>/blog/#content" class="more-posts">Meer Auto's</a>
+                <a href="<?php the_permalink(); echo $collection?>" class="more-posts"><?php echo $morecars; ?></a>
             <?php
             else:
-                echo '<h4 id="results">Er zijn op dit moment geen beschikbare posts.</h4>';
+                echo '<h4 id="results">' . $nocurrentresults . '</h4>';
             endif; ?>
             <?php wp_reset_query(); // reset the query ?>
         </div>

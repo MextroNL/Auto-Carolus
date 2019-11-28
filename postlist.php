@@ -8,37 +8,16 @@
 
 <?php get_header(); ?>
     <div class="container" id="content">
-        <h3 class="cat-description">Ons aanbod aan Auto's</h3>
+        <h3 class="cat-description"><?php echo $postlist_subtitle ?></h3>
 
-        <form name="search" class="search_input" method="post" action="<?php the_permalink();?>#content">
+        <form name="search" class="search_input" id="search-submit" method="post" action="<?php the_permalink();?>#content">
             <!--Searchbar-->
             <input type="search" onchange="document.filters.submit()" name="search" placeholder="<?php echo $searchbar ?>" <?php if(isset($_REQUEST['search'])){echo 'value="' . $_REQUEST['search'] . '"';}?> id="search_posts">
             <button type="submit" name="submit" id="searchicon">
                 <i class="fas fa-search"></i>
             </button>
         </form>
-        <form name="filters" class="filter_form" method="get" action="<?php the_permalink();?>#content">
-        <!--Post per page-->
-            <div class="amount_filter">
-                <label class="wrap" for="posts_per_page" id="amountLabel"><?php echo $posts_per_pagelabel; ?></label>
-                <select onchange="document.filters.submit()" name="posts_per_page" id="number_filter">
-                    <option value="4" <?php selected(4,$_REQUEST['posts_per_page']);?>>4</option>
-                    <option value="8" <?php selected(8,$_REQUEST['posts_per_page']);?>>8</option>
-                    <option value="16" <?php selected(16,$_REQUEST['posts_per_page']);?>>16</option>
-                    <option value="-1" <?php selected(-1,$_REQUEST['posts_per_page']);if( isset($_REQUEST['search'])) {echo 'selected="selected"';}?>><?php echo $showall; ?></option>
-                </select>
-            </div>
-        <!--Beroep Filter-->
-            <div class="function_filter">
-                <label class="wrap" for="tag_filter" id="functionLabel"><?php echo $filter_1; ?></label>
-                <select onchange="document.filters.submit()" name="tag_filter" id="tag_filter">
-                    <option value="0" <?php selected(0,$_REQUEST['tag_filter']);if( isset($_REQUEST['search'])) {echo 'selected="selected"';}?>><?php echo $showall; ?></option>
-                    <option value="regulier" <?php selected('regulier',$_REQUEST['tag_filter']);?>>Placeholder</option>
-                    <option value="autofloraison" <?php selected('autofloraison',$_REQUEST['tag_filter']);?>>Placeholder</option>
-                    <option value="feminissee" <?php selected('feminissee',$_REQUEST['tag_filter']);?>>Placeholder</option>
-                </select>
-            </div>
-        </form>
+
 
 
 
@@ -70,7 +49,7 @@
             $posts_per_page = -1; // Search Results
         }
         else {
-            $posts_per_page = 4; // default value
+            $posts_per_page = 8; // default value
         }
 
         //Beroep Filter Loop
@@ -126,32 +105,27 @@
                 <div class="row post-block" id="post-<?php the_ID(); ?>">
                     <div class="col-5">
                         <!-- Thumbnail -->
-                        <a href="<?php the_permalink(); ?>#content"><div class="recipe-thumbnail"><?php the_post_thumbnail('small'); ?></div></a>
+                        <a href="<?php the_permalink(); ?>#content"><div class="postlist-thumbnail"><?php the_post_thumbnail('small'); ?></div></a>
                         <!-- Thumbnail End -->
                     </div>
-                    <div class="col-7">
+                    <div class="col-7 post-description">
                         <!-- Title -->
-                        <a href="<?php the_permalink(); ?>#content"><h2 class="post-title"><?php the_title(); ?></h2></a>
+                        <a href="<?php the_permalink(); ?>#content"><h3 class="post-title"><?php the_title(); ?></h3></a>
                         <!-- Subtitle -->
-                        <h3 class="post-subtitle"><?php
-                            $posttags = get_the_tags();
-                            if ($posttags) {
-                                foreach($posttags as $tag) {
-                                    echo $tag->name . ' ';
-                                }
-                            }
-                            ?></h3>
                         <!-- Content -->
-                        <p class="post-subtitle">
-                            <?php echo $label_1; the_field('carrosserie'); ?><br>
-                            <?php echo $label_2; the_field('transmissie'); ?><br>
-                            <?php echo $label_3; the_field('kilometerstand'); ?>KM<br>
-                            <?php echo $label_4; the_field('bouwjaar'); ?><br>
-                            <?php echo $label_5; the_field('kenteken'); ?><br>
-                            <?php echo $label_6; the_field('prijs'); ?>€<br>
-                        </p>
-                        <p class="post-content"><?php echo wp_trim_words( get_the_content(), 40, '...' );?></p>
-
+                        <a href="<?php the_permalink(); ?>#content">
+                            <p class="post-subtitle">
+                                <?php echo $label_1; the_field('carrosserie'); ?><br>
+                                <?php echo $label_2; the_field('transmissie'); ?><br>
+                                <?php echo $label_3; the_field('kilometerstand'); ?>KM<br>
+                                <?php echo $label_4; the_field('bouwjaar'); ?><br>
+                                <?php echo $label_5; the_field('kenteken'); ?><br>
+                                <?php echo $label_6; the_field('prijs'); ?>€<br>
+                            </p>
+                        </a>
+                        <a href="<?php the_permalink(); ?>#content">
+                            <p class="post-content" id="post-list-content"><?php echo wp_trim_words( get_the_content(), 40, '...' );?></p>
+                        </a>
                         <a href="<?php the_permalink(); ?>#content" class="single-button"><?php echo $view_post_list; ?></a>
                     </div>
 
@@ -160,7 +134,8 @@
             endwhile;
             $totalPosts = $custom_query->found_posts; //Shows Total Posts
         elseif (!empty($_REQUEST['search']) && $totalPosts == 0):
-            echo '<h2 id="results">' . $noresultsfor . ' "' . $nospace . '"</h2>';
+            echo '<h2 id="results">' . $noresultsfor . ' "' . $nospace . '"</h2>
+                <a onclick="document.getElementById(\'search_posts\').value = \'\'"><div id="retry_search"><i class="fas fa-undo-alt"></i></div></a>';
         else:
             echo '<h2 id="results">' . $noresults . '</h2><style>@media screen and (max-width: 800px){.container{padding-bottom:20vmax}}</style>';
 

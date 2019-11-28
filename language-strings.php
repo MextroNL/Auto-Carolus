@@ -27,6 +27,13 @@ global $results_2;
 global $result_1;
 global $result_2;
 global $back;
+global $collection;
+global $nocurrentresults;
+global $morecars;
+global $category_name;
+global $recent_cars;
+global $postlist_subtitle;
+
 
 if (strpos($url,'/en/') !== false) {
     //English Strings
@@ -51,6 +58,12 @@ if (strpos($url,'/en/') !== false) {
     $results_1 = "There are "; $results_2 = ' results for: "';
     $result_1 = "There is "; $result_2 = ' result for: "';
     $back = "Go Back";
+    $collection = "/collection/#content";
+    $nocurrentresults = "There aren't any available cars at this time.";
+    $morecars = "More Cars";
+    $category_name = "Collection";
+    $recent_cars = "Recently added Cars";
+    $postlist_subtitle = "Our range of Cars";
 
 } else {
     //Dutch Strings
@@ -76,4 +89,10 @@ if (strpos($url,'/en/') !== false) {
     $results_1 = "Er zijn "; $results_2 = ' resultaten gevonden voor: "';
     $result_1 = "Er is "; $result_2 = ' resultaat gevonden voor: "';
     $back = "Ga Terug";
+    $collection = "/collectie/#content";
+    $nocurrentresults = "Er zijn op dit moment geen beschikbare auto's.";
+    $morecars = "Meer Auto's";
+    $category_name = "Collectie";
+    $recent_cars = "Recent toegevoegde Auto's";
+    $postlist_subtitle = "Ons aanbod aan Auto's";
 }

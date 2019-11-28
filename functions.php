@@ -80,6 +80,7 @@ register_sidebar( array(
 //    'after_title' => '</h3>',
 ) );
 
+
 //      Index Widgets
 register_sidebar( array(
     'name' => 'Index Widget 1',
