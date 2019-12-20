@@ -240,7 +240,7 @@ button:active{
     padding: 0;
     position: absolute;
     top: 0vmax;
-    width: 6%;
+    width: 7%;
     z-index: 200;
     height: 2%;
 }
@@ -254,6 +254,16 @@ button:active{
     right: 0!important;
 }
 
+#header-lang .dropdown-menu{
+    padding: 0;
+    margin: 0;
+}
+
+#footer-lang .dropdown-menu{
+    padding: 0;
+    margin: 0;
+}
+
 @media screen and (max-width: 575px){
     #footer-lang img {
         height: 2vmax;
@@ -263,13 +273,15 @@ button:active{
     #header-lang {
         right: 4vmax!important;
     }
-}
 
+    #footer-lang .lang-item{
+        padding-bottom: 1.5vmax;
+    }
+}
 .language_menu .dropdown-item:active{
     background-color: unset!important;
     color: unset!important;
 }
-
 
 .language_menu img{
     height: 2vmax;
@@ -282,6 +294,7 @@ button:active{
 .language_menu img{
     transition: .1s ease;
 }
+
 .language_menu img:hover{
     transition: .1s ease;
     -webkit-transform: scale(1.1);
@@ -289,6 +302,11 @@ button:active{
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
 }
+#footer-lang .dropdown-menu{
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 
 
 @media screen and (max-width: 575px) {
@@ -300,11 +318,17 @@ button:active{
         height: 4vmax;
     }
     .language_menu {
-        right: 2.8vmax;
+        right: 3.8vmax;
     }
     #footer-lang{
         top: 0vmax!important;
     }
+    #footer-lang .dropdown-menu{
+        left: 0%!important;
+        transform: translateX(-100%)!important;
+        margin-top: 1.2vmax;
+    }
+
 }
 
 /*Logo*/
@@ -2271,6 +2295,11 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
     left: 5px!important;
     font-size: 2vmax!important;
     text-align: center!important;
+}
+
+.grecaptcha-badge{
+    z-index: 300;
+    display: none;
 }
 
 /*CSS END*/
